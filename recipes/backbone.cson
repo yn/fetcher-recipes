@@ -1,0 +1,19 @@
+urls: [
+  type: "file"
+  url: "http://backbonejs.org/backbone.js"
+  dest: "vendor/js/backbone.js"
+  message: """
+           Backbone.js requires Underscore.js, which must
+           be loaded prior to Backbone itself. In a lineman
+           application, you might configure this in
+           config/files.js like so:
+
+           js: {
+             vendor: [
+               "vendor/js/underscore.js",
+               "vendor/js/backbone.js",
+               "vendor/js/**/*.js"
+             ]
+           }
+           """
+]
