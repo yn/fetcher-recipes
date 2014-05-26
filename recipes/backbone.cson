@@ -1,8 +1,15 @@
 steps: [
-  type: "file"
-  url: "http://backbonejs.org/backbone.js"
-  dest: "vendor/js/backbone.js"
+  {
+    type: "recipe"
+    name: "underscore"
+  },
+  {
+    type: "file"
+    url: "http://backbonejs.org/backbone.js"
+    dest: "vendor/js/backbone.js"
+  }
 ]
+
 message: """
          Backbone requires 'underscore', which must be loaded prior to Backbone
          itself.
