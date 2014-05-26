@@ -1,0 +1,24 @@
+steps: [
+  type: "file"
+  url: "http://builds.emberjs.com/stable/ember.js"
+  dest: "vendor/js/ember.js"
+]
+message: """
+         Remember to `npm install --save-dev lineman-ember` in order for Lineman
+         to precompile your Ember templates (stored in "app/templates") for you!
+
+         Ember requires jQuery and a Handlebars runtime. (If you're going to
+         be compiling Handlebars on the client, you'll need the full-blown
+         handlebars library.)
+
+         You may need to order your vendor files something like this:
+
+         js: {
+           vendor: [
+             "vendor/js/jquery.js",
+             "vendor/js/handlebars-runtime.js",
+             "vendor/js/ember.js",
+             "vendor/js/**/*.js"
+           ]
+         }
+         """
