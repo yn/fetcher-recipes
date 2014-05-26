@@ -4,14 +4,32 @@ steps: [
   stripRootDir: true
   files: [
     {
-      src: ["css/bootstrap.css", "css/bootstrap-theme.css"]
+      src: [
+        "css/bootstrap.css", "css/bootstrap.css.map",
+        "css/bootstrap-theme.css", "css/bootstrap-theme.css.map"
+      ]
       dest: "vendor/css"
     }, {
       src: "fonts"
-      dest: "vendor/static"
+      dest: "vendor/static/fonts"
     }, {
       src: "js/bootstrap.js",
       dest: "vendor/js"
     }
   ]
 ]
+message: """
+         Bootstrap's JavaScript dependency requires jQuery. If your project
+         doesn't already include jQuery, then you may choose to add it (e.g.
+         `lineman fetch jquery`), or you can delete `vendor/js/bootstrap.js`
+         if you don't intend to use Bootstrap's JS library.
+
+         You may need to order your vendored libs in "config/files.js" like so:
+
+         js: {
+           vendor: [
+             "vendor/js/jquery.js",
+             "vendor/js/**/*.js"
+           ]
+         }
+         """
