@@ -1,0 +1,20 @@
+steps: [
+  type: "file"
+  url: "http://builds.emberjs.com/beta/ember-data.js"
+  dest: "vendor/js/ember-data.js"
+]
+message: """
+         ** Ember Data is still in beta—This download is from a beta channel! **
+
+         You may need to order your vendor files something like this:
+
+         js: {
+           vendor: [
+             "vendor/js/jquery.js",
+             "vendor/js/handlebars-runtime.js",
+             "vendor/js/ember.js",
+             "vendor/js/ember-data.js",
+             "vendor/js/**/*.js"
+           ]
+         }
+         """
