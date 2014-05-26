@@ -11,7 +11,7 @@ message: """
          be compiling Handlebars on the client, you'll need the full-blown
          handlebars library.)
 
-         You may need to order your vendor files something like this:
+         You may need to order your vendored libs in "config/files.js" like so:
 
          js: {
            vendor: [

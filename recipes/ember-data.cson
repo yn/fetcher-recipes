@@ -4,9 +4,9 @@ steps: [
   dest: "vendor/js/ember-data.js"
 ]
 message: """
-         ** Ember Data is still in beta—This download is from a beta channel! **
+         ** Ember Data is still in beta—this download is from a beta channel! **
 
-         You may need to order your vendor files something like this:
+         You may need to order your vendored libs in "config/files.js" like so:
 
          js: {
            vendor: [

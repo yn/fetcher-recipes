@@ -4,10 +4,10 @@ steps: [
   dest: "vendor/js/backbone.js"
 ]
 message: """
-         backbone requires underscore, which must
-         be loaded prior to Backbone itself. In a lineman
-         application, you might configure this in
-         config/files.js like so:
+         Backbone requires 'underscore', which must be loaded prior to Backbone
+         itself.
+
+         You may need to order your vendored libs in "config/files.js" like so:
 
          js: {
            vendor: [
