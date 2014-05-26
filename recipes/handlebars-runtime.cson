@@ -1,5 +1,5 @@
 steps: [
   type: "file"
-  url: "http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v1.3.0.js"
-  dest: "vendor/js/handlebars.js"
+  url: "http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars.runtime-v1.3.0.js"
+  dest: "vendor/js/handlebars-runtime.js"
 ]
