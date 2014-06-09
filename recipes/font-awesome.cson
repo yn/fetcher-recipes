@@ -1,0 +1,16 @@
+steps: [
+  type: "archive"
+  url: "http://fortawesome.github.io/Font-Awesome/assets/font-awesome-4.1.0.zip"
+  stripRootDir: true
+  files: [
+    {
+      src: [
+        "css/font-awesome.css"
+      ]
+      dest: "vendor/css"
+    }, {
+      src: "fonts"
+      dest: "vendor/static/fonts"
+    }
+  ]
+]
