@@ -1,0 +1,26 @@
+steps: [
+  type: "file"
+  url: "http://www.google-analytics.com/analytics.js"
+  dest: "vendor/js/google-analytics.js"
+  prepend: """
+           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
+             // Don't need to create the script tag, since we'll be bundling it in the JS build:
+             // a=s.createElement(o),
+             // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+           """
+]
+message: """
+         (Remember to refetch this script regularly, as it's liable to change without notice.)
+
+         This recipe prepends the fetched script with the snippet of code Google provides to set up
+         the `window.ga` object.
+
+         After Google Analytics is loaded, any variables must be set by your scripts, like so:
+
+         ga('create', 'UA-12345678-09');
+         ga('set', 'dimension1', 'someIdWeCareAbout');
+
+         """
