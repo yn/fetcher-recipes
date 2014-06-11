@@ -1,0 +1,20 @@
+steps: [
+  type: "file"
+  url: "http://platform.twitter.com/widgets.js"
+  dest: "vendor/js/twitter-widgets-api.js"
+  prepend: """
+           setTimeout(function(){
+
+           """
+  append: """
+          }, 1);
+
+          """
+]
+message: """
+         (Remember to refetch this script regularly, as it's liable to change without notice.)
+
+         This recipe wraps the script in a `setTimeout` call, because it is not designed to be
+         invoked synchronously with the page load (and would otherwise throw an error).
+
+         """
