@@ -1,0 +1,9 @@
+steps: [
+  type: "file"
+  url: "http://connect.facebook.net/en_US/all.js"
+  dest: "vendor/js/facebook-connect-api-all.js"
+]
+message: """
+         (Remember to refetch this script regularly, as it's liable to change without notice.)
+
+         """
