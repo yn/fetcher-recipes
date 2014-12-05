@@ -1,5 +1,5 @@
 steps: [
   type: "file"
-  url: "http://code.jquery.com/jquery-1.11.1.js"
+  url: "http://code.jquery.com/jquery-1.9.1.js"
   dest: "vendor/js/jquery.js"
 ]
